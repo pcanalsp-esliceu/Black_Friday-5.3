@@ -19,6 +19,9 @@ header {
     padding: 12px 16px;
     background-color: #111;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header p {
@@ -45,11 +48,20 @@ h1 {
     font-size: 2.4rem;
 }
 
+.productes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 .producte {
     margin-bottom: 20px;
     padding: 12px;
     background-color: white;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .producte img {
@@ -64,6 +76,9 @@ h1 {
 
 .preus {
     margin: 0 0 12px;
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
 }
 
 .preus del {
@@ -81,6 +96,7 @@ h1 {
     color: white;
     font-size: 1.3rem;
     font-weight: bold;
+    margin-left: auto;
 }
 
 .boto {
@@ -91,4 +107,26 @@ h1 {
     text-align: center;
     text-decoration: none;
     font-weight: bold;
+    display: flex;
+    gap: 8px ;
+    align-items: baseline;
+    margin-top: auto;
+}
+
+@media (min-width: 576px) {
+    .producte {
+        width: calc((100% - 20px) / 2);
+    }
+}
+
+@media (min-width: 768px ) {
+    .producte {
+        width: calc((100% - 40px) / 3);
+    }
+}
+
+@media (min-width: 992px ) {
+    .producte {
+        width: calc((100% - 60px) / 4);
+    }
 }
